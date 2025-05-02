@@ -1,17 +1,11 @@
 import Link from "next/link";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center text-center px-6">
-      <header className="fixed top-0 left-0 w-full flex justify-between items-center px-8 py-4 bg-[#1e1e1e]/90 backdrop-blur-md z-50 border-b border-gray-800">
-        <h1 className="text-xl font-bold">Nicolas.dev</h1>
-        <nav className="space-x-6">
-          <Link href="#about" className="hover:text-cyan-400 transition">Sobre</Link>
-          <Link href="#projects" className="hover:text-cyan-400 transition">Projetos</Link>
-          <Link href="#contact" className="hover:text-cyan-400 transition">Contato</Link>
-        </nav>
-      </header>
-
+      <Header />
       <section className="flex flex-col items-center justify-center gap-4 h-screen">
         <h2 className="text-4xl md:text-6xl font-extrabold">
           Olá, eu sou <span className="text-cyan-400">Nicolas</span>
@@ -122,6 +116,7 @@ export default function Home() {
           </a>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }
