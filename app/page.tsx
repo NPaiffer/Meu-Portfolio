@@ -12,139 +12,6 @@ export default function Home() {
         </nav>
       </header>
 
-      <section id="about" className="w-full max-w-4xl mt-20 px-4 text-left">
-          <h3 className="text-3xl font-bold mb-4 border-b border-cyan-500 inline-block">
-            Sobre Mim
-          </h3>
-
-          <section id="projects" className="w-full max-w-5xl mt-20 px-4">
-            <h3 className="text-3xl font-bold mb-6 border-b border-cyan-500 inline-block">
-              Projetos
-            </h3>
-
-            <div className="space-y-8 max-h-[80vh] overflow-y-auto pr-2">
-              <div className="bg-[#333333] rounded-xl shadow-lg flex flex-col md:flex-row items-center md:items-start p-4 gap-6">
-                <img
-                  src="/projeto1.png"
-                  alt="Projeto 1"
-                  className="w-full md:w-60 h-auto rounded-lg object-cover"
-                />
-                <div>
-                  <h4 className="text-xl font-semibold text-cyan-400">API Biblioteca .NET</h4>
-                  <p className="text-gray-300 mt-2 text-sm">
-                    Projeto acadêmico com ASP.NET Core e Oracle DB. Inclui autenticação JWT,
-                    CRUD completo e arquitetura em camadas.
-                  </p>
-                  <a
-                    href="https://github.com/seuusuario/repositorio-api"
-                    target="_blank"
-                    className="inline-block mt-4 text-cyan-400 hover:underline text-sm"
-                  >
-                    Ver no GitHub →
-                  </a>
-                </div>
-              </div>
-
-              <div className="bg-[#333333] rounded-xl shadow-lg flex flex-col md:flex-row items-center md:items-start p-4 gap-6">
-                <img
-                  src="/projeto2.png"
-                  alt="Projeto 2"
-                  className="w-full md:w-60 h-auto rounded-lg object-cover"
-                />
-                <div>
-                  <h4 className="text-xl font-semibold text-cyan-400">App Filmes React Native</h4>
-                  <p className="text-gray-300 mt-2 text-sm">
-                    Aplicativo mobile feito com React Native e Expo. Possui sistema de favoritar
-                    filmes e integração com API externa.
-                  </p>
-                  <a
-                    href="https://github.com/seuusuario/repositorio-filmes"
-                    target="_blank"
-                    className="inline-block mt-4 text-cyan-400 hover:underline text-sm"
-                  >
-                    Ver no GitHub →
-                  </a>
-                </div>
-              </div>
-
-            </div>
-          </section>
-
-        <section id="contact" className="w-full max-w-3xl mt-20 px-4 mb-20">
-          <h3 className="text-3xl font-bold mb-6 border-b border-cyan-500 inline-block">
-            Contato
-          </h3>
-
-          <p className="text-gray-300 mb-6">
-            Ficou interessado em trabalhar comigo ou quer trocar uma ideia? Envie uma mensagem ou me encontre nas redes abaixo!
-          </p>
-
-          <form
-            action="https://formsubmit.co/nicpaiffer@hotmail.com"
-            method="POST"
-            className="flex flex-col space-y-4"
-          >
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_next" value="https://seusite.com/obrigado" />
-
-            <input
-              type="text"
-              name="name"
-              placeholder="Seu nome"
-              required
-              className="bg-[#1e1e1e] border border-gray-600 rounded-lg p-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Seu e-mail"
-              required
-              className="bg-[#1e1e1e] border border-gray-600 rounded-lg p-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-            />
-            <textarea
-              name="message"
-              rows={5}
-              placeholder="Sua mensagem"
-              required
-              className="bg-[#1e1e1e] border border-gray-600 rounded-lg p-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-2 px-6 rounded-xl transition"
-            >
-              Enviar
-            </button>
-          </form>
-
-          <div className="mt-10 flex gap-6 text-cyan-400">
-            <a href="https://github.com/NPaiffer" target="_blank" className="hover:underline">
-              GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/nicolas-paiffer-do-carmo-854324201/" target="_blank" className="hover:underline">
-              LinkedIn
-            </a>
-            <a href="mailto:nicpaiffer@hotmail.com" className="hover:underline">
-              Email
-            </a>
-          </div>
-        </section>
-
-
-          <p className="text-gray-300 text-lg leading-relaxed">
-            Meu nome é <span className="text-cyan-400 font-semibold">Nicolas Paiffer do Carmo</span>,
-            tenho 22 anos e sou desenvolvedor Front-End apaixonado por tecnologia desde a infância.
-            Com forte senso de curiosidade, criatividade e dedicação, busco sempre criar interfaces
-            que combinam performance, acessibilidade e estética moderna.
-          </p>
-
-          <p className="text-gray-300 text-lg leading-relaxed mt-4">
-            Atualmente estudo <span className="text-cyan-400">Análise e Desenvolvimento de Sistemas</span> na FIAP
-            e venho desenvolvendo projetos próprios e acadêmicos com foco em <strong>React</strong>,
-            <strong> TypeScript</strong>, <strong>TailwindCSS</strong> e princípios de UI/UX.
-            Estou determinado a contribuir com soluções que realmente agreguem valor aos usuários.
-          </p>
-        </section>
-
       <section className="flex flex-col items-center justify-center gap-4 h-screen">
         <h2 className="text-4xl md:text-6xl font-extrabold">
           Olá, eu sou <span className="text-cyan-400">Nicolas</span>
@@ -164,6 +31,95 @@ export default function Home() {
               Entrar em Contato
             </button>
           </Link>
+        </div>
+      </section>
+
+      <section id="about" className="w-full max-w-4xl mt-20 px-4 text-left">
+        <h3 className="text-3xl font-bold mb-4 border-b border-cyan-500 inline-block">
+          Sobre Mim
+        </h3>
+
+        <p className="text-gray-300 text-lg leading-relaxed">
+          Meu nome é <span className="text-cyan-400 font-semibold">Nicolas Paiffer do Carmo</span>,
+          tenho 22 anos e sou desenvolvedor Front-End apaixonado por tecnologia desde a infância.
+          Com forte senso de curiosidade, criatividade e dedicação, busco sempre criar interfaces
+          que combinam performance, acessibilidade e estética moderna.
+        </p>
+
+        <p className="text-gray-300 text-lg leading-relaxed mt-4">
+          Atualmente estudo <span className="text-cyan-400">Análise e Desenvolvimento de Sistemas</span> na FIAP
+          e venho desenvolvendo projetos próprios e acadêmicos com foco em <strong>React</strong>,
+          <strong> TypeScript</strong>, <strong>TailwindCSS</strong> e princípios de UI/UX.
+          Estou determinado a contribuir com soluções que realmente agreguem valor aos usuários.
+        </p>
+      </section>
+
+      <section id="projects" className="w-full max-w-5xl mt-20 px-4">
+        <h3 className="text-3xl font-bold mb-6 border-b border-cyan-500 inline-block">
+          Projetos
+        </h3>
+
+        <p className="text-gray-400 text-base">
+          Em breve, você poderá explorar meus principais projetos por aqui. Fique à vontade para visitar meu GitHub enquanto isso!
+        </p>
+      </section>
+
+      <section id="contact" className="w-full max-w-3xl mt-20 px-4 mb-20">
+        <h3 className="text-3xl font-bold mb-6 border-b border-cyan-500 inline-block">
+          Contato
+        </h3>
+
+        <p className="text-gray-300 mb-6">
+          Ficou interessado em trabalhar comigo ou quer trocar uma ideia? Envie uma mensagem ou me encontre nas redes abaixo!
+        </p>
+
+        <form
+          action="https://formsubmit.co/nicpaiffer@hotmail.com"
+          method="POST"
+          className="flex flex-col space-y-4"
+        >
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://seusite.com/obrigado" />
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Seu nome"
+            required
+            className="bg-[#1e1e1e] border border-gray-600 rounded-lg p-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Seu e-mail"
+            required
+            className="bg-[#1e1e1e] border border-gray-600 rounded-lg p-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+          />
+          <textarea
+            name="message"
+            rows={5}
+            placeholder="Sua mensagem"
+            required
+            className="bg-[#1e1e1e] border border-gray-600 rounded-lg p-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+          ></textarea>
+          <button
+            type="submit"
+            className="bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-2 px-6 rounded-xl transition"
+          >
+            Enviar
+          </button>
+        </form>
+
+        <div className="mt-10 flex gap-6 text-cyan-400">
+          <a href="https://github.com/NPaiffer" target="_blank" className="hover:underline">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/nicolas-paiffer-do-carmo-854324201/" target="_blank" className="hover:underline">
+            LinkedIn
+          </a>
+          <a href="mailto:nicpaiffer@hotmail.com" className="hover:underline">
+            Email
+          </a>
         </div>
       </section>
     </main>
