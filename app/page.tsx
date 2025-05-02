@@ -1,103 +1,171 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen flex flex-col items-center justify-center text-center px-6">
+      <header className="fixed top-0 left-0 w-full flex justify-between items-center px-8 py-4 bg-[#1e1e1e]/90 backdrop-blur-md z-50 border-b border-gray-800">
+        <h1 className="text-xl font-bold">Nicolas.dev</h1>
+        <nav className="space-x-6">
+          <Link href="#about" className="hover:text-cyan-400 transition">Sobre</Link>
+          <Link href="#projects" className="hover:text-cyan-400 transition">Projetos</Link>
+          <Link href="#contact" className="hover:text-cyan-400 transition">Contato</Link>
+        </nav>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      <section id="about" className="w-full max-w-4xl mt-20 px-4 text-left">
+          <h3 className="text-3xl font-bold mb-4 border-b border-cyan-500 inline-block">
+            Sobre Mim
+          </h3>
+
+          <section id="projects" className="w-full max-w-5xl mt-20 px-4">
+            <h3 className="text-3xl font-bold mb-6 border-b border-cyan-500 inline-block">
+              Projetos
+            </h3>
+
+            <div className="space-y-8 max-h-[80vh] overflow-y-auto pr-2">
+              <div className="bg-[#333333] rounded-xl shadow-lg flex flex-col md:flex-row items-center md:items-start p-4 gap-6">
+                <img
+                  src="/projeto1.png"
+                  alt="Projeto 1"
+                  className="w-full md:w-60 h-auto rounded-lg object-cover"
+                />
+                <div>
+                  <h4 className="text-xl font-semibold text-cyan-400">API Biblioteca .NET</h4>
+                  <p className="text-gray-300 mt-2 text-sm">
+                    Projeto acadêmico com ASP.NET Core e Oracle DB. Inclui autenticação JWT,
+                    CRUD completo e arquitetura em camadas.
+                  </p>
+                  <a
+                    href="https://github.com/seuusuario/repositorio-api"
+                    target="_blank"
+                    className="inline-block mt-4 text-cyan-400 hover:underline text-sm"
+                  >
+                    Ver no GitHub →
+                  </a>
+                </div>
+              </div>
+
+              <div className="bg-[#333333] rounded-xl shadow-lg flex flex-col md:flex-row items-center md:items-start p-4 gap-6">
+                <img
+                  src="/projeto2.png"
+                  alt="Projeto 2"
+                  className="w-full md:w-60 h-auto rounded-lg object-cover"
+                />
+                <div>
+                  <h4 className="text-xl font-semibold text-cyan-400">App Filmes React Native</h4>
+                  <p className="text-gray-300 mt-2 text-sm">
+                    Aplicativo mobile feito com React Native e Expo. Possui sistema de favoritar
+                    filmes e integração com API externa.
+                  </p>
+                  <a
+                    href="https://github.com/seuusuario/repositorio-filmes"
+                    target="_blank"
+                    className="inline-block mt-4 text-cyan-400 hover:underline text-sm"
+                  >
+                    Ver no GitHub →
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+        <section id="contact" className="w-full max-w-3xl mt-20 px-4 mb-20">
+          <h3 className="text-3xl font-bold mb-6 border-b border-cyan-500 inline-block">
+            Contato
+          </h3>
+
+          <p className="text-gray-300 mb-6">
+            Ficou interessado em trabalhar comigo ou quer trocar uma ideia? Envie uma mensagem ou me encontre nas redes abaixo!
+          </p>
+
+          <form
+            action="https://formsubmit.co/nicpaiffer@hotmail.com"
+            method="POST"
+            className="flex flex-col space-y-4"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://seusite.com/obrigado" />
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Seu nome"
+              required
+              className="bg-[#1e1e1e] border border-gray-600 rounded-lg p-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <input
+              type="email"
+              name="email"
+              placeholder="Seu e-mail"
+              required
+              className="bg-[#1e1e1e] border border-gray-600 rounded-lg p-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            />
+            <textarea
+              name="message"
+              rows={5}
+              placeholder="Sua mensagem"
+              required
+              className="bg-[#1e1e1e] border border-gray-600 rounded-lg p-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            ></textarea>
+            <button
+              type="submit"
+              className="bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-2 px-6 rounded-xl transition"
+            >
+              Enviar
+            </button>
+          </form>
+
+          <div className="mt-10 flex gap-6 text-cyan-400">
+            <a href="https://github.com/NPaiffer" target="_blank" className="hover:underline">
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/nicolas-paiffer-do-carmo-854324201/" target="_blank" className="hover:underline">
+              LinkedIn
+            </a>
+            <a href="mailto:nicpaiffer@hotmail.com" className="hover:underline">
+              Email
+            </a>
+          </div>
+        </section>
+
+
+          <p className="text-gray-300 text-lg leading-relaxed">
+            Meu nome é <span className="text-cyan-400 font-semibold">Nicolas Paiffer do Carmo</span>,
+            tenho 22 anos e sou desenvolvedor Front-End apaixonado por tecnologia desde a infância.
+            Com forte senso de curiosidade, criatividade e dedicação, busco sempre criar interfaces
+            que combinam performance, acessibilidade e estética moderna.
+          </p>
+
+          <p className="text-gray-300 text-lg leading-relaxed mt-4">
+            Atualmente estudo <span className="text-cyan-400">Análise e Desenvolvimento de Sistemas</span> na FIAP
+            e venho desenvolvendo projetos próprios e acadêmicos com foco em <strong>React</strong>,
+            <strong> TypeScript</strong>, <strong>TailwindCSS</strong> e princípios de UI/UX.
+            Estou determinado a contribuir com soluções que realmente agreguem valor aos usuários.
+          </p>
+        </section>
+
+      <section className="flex flex-col items-center justify-center gap-4 h-screen">
+        <h2 className="text-4xl md:text-6xl font-extrabold">
+          Olá, eu sou <span className="text-cyan-400">Nicolas</span>
+        </h2>
+        <p className="text-lg md:text-xl max-w-xl text-gray-400">
+          Desenvolvedor Front-End focado em criar experiências digitais modernas, acessíveis e com ótimo desempenho.
+        </p>
+
+        <div className="mt-6 space-x-4">
+          <Link href="#projects">
+            <button className="bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-2 px-4 rounded-xl transition">
+              Ver Projetos
+            </button>
+          </Link>
+          <Link href="#contact">
+            <button className="border border-cyan-500 hover:bg-cyan-500 hover:text-white text-cyan-400 font-medium py-2 px-4 rounded-xl transition">
+              Entrar em Contato
+            </button>
+          </Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+    </main>
   );
 }
